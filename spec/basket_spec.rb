@@ -1,8 +1,8 @@
 require 'basket'
 describe Basket do
-  let (:basket) { Basket.new }
-  let (:item) { double :item, price: 10 }
-  
+  let(:basket) { Basket.new }
+  let(:item) { double :item, price: 10 }
+
   it 'starts empty' do
     expect(basket.items.count).to eq(0)
   end
@@ -11,15 +11,11 @@ describe Basket do
     basket.add item
     expect(basket.items).to include(item)
   end
-  
+
   it 'knows number held of an item' do
-    2.times{ basket.add item }
+    basket.add item
+    basket.add item
     expect(basket.number_held(item)).to eq(2)
-  end
- 
-  it 'can calculate subtotal for an item' do
-    2.times{ basket.add item }
-    expect(basket.subtotal_for(item)).to eq(20)
   end
 
   it 'can calculate basic total price' do
@@ -27,4 +23,3 @@ describe Basket do
     expect(basket.basic_total_price).to eq(10)
   end
 end
-
