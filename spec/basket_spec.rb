@@ -11,6 +11,16 @@ describe Basket do
     basket.add item
     expect(basket.items).to include(item)
   end
+  
+  it 'knows number held of an item' do
+    2.times{ basket.add item }
+    expect(basket.number_held(item)).to eq(2)
+  end
+ 
+  it 'can calculate subtotal for an item' do
+    2.times{ basket.add item }
+    expect(basket.subtotal_for(item)).to eq(20)
+  end
 
   it 'can calculate basic total price' do
     basket.add(item)

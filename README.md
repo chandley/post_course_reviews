@@ -16,7 +16,9 @@ Initial design
 ### Item
 *  knows what its base price is
 
-### Promotional Rules
+### Promotional Rule
+*  Can apply a reduced price for an item
+*  Can apply a percent discount to a basket :
 *  Applies discount to basket
 
 ### Totaliser
