@@ -6,7 +6,7 @@ describe PromotionMultibuy do
   let(:item)  { double :item }
 
   before :each do
-    multibuy.set_discount( item: item, quantity: 1, discount_price: 3 )
+    multibuy.set_discount( item: item, quantity: 2, discount_price: 3 )
     allow(basket).to receive(:number_held).twice.and_return(2)
     allow(basket).to receive(:subtotal_for).and_return(8)
   end
