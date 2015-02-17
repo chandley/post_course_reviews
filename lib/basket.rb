@@ -13,7 +13,6 @@ class Basket
   end
   
   def basic_total_price
-    items.first.price
     items.reduce(0) { |total, item| total + item.price }
   end
   
