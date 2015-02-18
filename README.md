@@ -14,13 +14,14 @@ Initial design
 *  contains items
   
 ### Item
-*  knows what its base price is
+*  knows what its base price and name is
 
 ### Promotional Rule
-*  Can apply a reduced price for an item
-*  Can apply a percent discount to a basket :
-*  Applies discount to basket
+*  Can calculate a reduced price for an item
+*  Can calculate a percent discount to a basket 
+*  Supplies an adjustment factor for previously applied discounts
 
 ### Totaliser
 *  calculates total
 *  applies discount
+*  adjusts discounts for other discounts already applied

@@ -11,8 +11,8 @@ class PromotionSpend
     0
   end
   
-  def discount_adjustment(existing_discount, basket)
-    qualify_for_discount?(basket) ? existing_discount * @discount_factor : 0 
+  def discount_adjustment_factor(basket)
+    qualify_for_discount?(basket) ? @discount_factor : 0 
   end
 
   private

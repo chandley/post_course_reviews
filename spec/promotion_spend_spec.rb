@@ -18,9 +18,13 @@ describe PromotionSpend do
     expect(spend.discount_for(basket)).to eq(7)
   end
 
-  it 'applies an adjustment for discounts already applied' do
+  it 'applies an adjustment factor for discounts already applied' do
     allow(basket).to receive(:basic_total_price).and_return(70)
-    expect(spend.discount_adjustment(existing_discount = 10,basket)).to eq(1)    
+    expect(spend.discount_adjustment_factor(basket)).to eq(0.1)    
   end
 
+  it 'gives no adjustment factor when discount not applied' do
+    allow(basket).to receive(:basic_total_price).and_return(50)
+    expect(spend.discount_adjustment_factor(basket)).to eq(0)    
+  end
 end
