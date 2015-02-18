@@ -24,4 +24,8 @@ describe PromotionMultibuy do
   it 'gives a discount when buying more than offer quantity of item' do
     expect(multibuy.discount_for(basket)).to eq(2)
   end
+  
+  it 'does not give an adjustment factor for previous discounts' do
+    expect(multibuy.discount_adjustment_factor(basket)).to eq(0)   
+  end
 end

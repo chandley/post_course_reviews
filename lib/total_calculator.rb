@@ -12,16 +12,11 @@ class TotalCalculator
   end
 
   private
-#  def total_discount(basket)
-#    @promotions.map { |promotion| promotion.discount_for(basket) }.reduce(:+)
-#  end
-  
   def total_discount(basket)
-    total = 0
-    @promotions.each do |promotion|
+    @promotions.reduce(0) do |total, promotion|
       total = total * (1 - promotion.discount_adjustment_factor(basket))
-      total = total + promotion.discount_for(basket)
+      total + promotion.discount_for(basket)
     end
-    total
   end
+
 end
