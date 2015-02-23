@@ -17,7 +17,7 @@ describe TotalCalculator do
   end
 
   
-  it 'can calculate discounts to total price' do
+  it 'can apply discounts to total price' do
     expect(bogof).to receive(:discount_for).and_return(1)
     expect(supersize).to receive(:discount_for).and_return(1)
     totaliser.discounted_total(basket)
