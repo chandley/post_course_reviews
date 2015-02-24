@@ -11,11 +11,13 @@ class PromotionMultibuy
     end
     0
   end
-  
+
   def discount_adjustment_factor(basket)
     0
   end
+
   private
+
   def qualify_for_discount?(basket)
     basket.number_held(@item) >= @quantity
   end

@@ -1,8 +1,9 @@
 require 'basket'
 
 class Checkout
-  def initialize()
+  def initialize(promotions=[])
     @basket = Basket.new
+    @promotions = promotions
   end
   
   def scan(item)
@@ -10,6 +11,8 @@ class Checkout
   end
   
   def total
-    @basket.basic_total_price
+    total_calculator = TotalCalculator.new
+    @promotions.each { |promotion| total_calculator.add_promotion(promotion) }
+    total_calculator.discounted_total(@basket)
   end
 end
