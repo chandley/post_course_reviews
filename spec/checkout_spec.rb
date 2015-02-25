@@ -1,7 +1,7 @@
 require "checkout"
 
 describe Checkout do
-  it "can scan an item" do
+  it "can scan an item and calculate a total" do
     co = Checkout.new
     item = double Item, price: 1
     co.scan item
