@@ -8,7 +8,7 @@ class TotalCalculator
   end
 
   def discounted_total(basket)
-    basket.basic_total_price - total_discount(basket)
+    (basket.basic_total_price - total_discount(basket)).round(2)
   end
 
   private
