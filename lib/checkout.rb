@@ -1,4 +1,5 @@
 require 'basket'
+require 'total_calculator'
 
 class Checkout
   def initialize(promotions=[])
