@@ -20,7 +20,7 @@ Make a checkout that can scan items and calculate discounts
 
 ### Solution
 
-#### Checkout
+## Checkout
 *  scans items
 *  shows totals
 - interacts with basket, totaliser, promotion
@@ -47,24 +47,21 @@ Make a checkout that can scan items and calculate discounts
 *  adjusts discounts for other discounts already applied
 
 
-#### Setup
-* easiest to run through tests
+### Setup
 * to run directly use irb
-
+* can also run through tests
 ```
-files = %w(checkout item promotion_multibuy promotion_spend)
-files.each {|file| require file }
-item = Item.new
-item.name = 'Lavender Heart'
-item.price = 9.25
-spend =  PromotionSpend.new
-spend.set_discount( threshold: 60, discount_factor: 0.1 ) 
-multibuy = PromotionMultibuy.new 
-multibuy.set_discount( item: @item1, quantity: 2, discount_price: 8.50 )
-co = Checkout.new([multibuy, spend])
-co.scan(item)
-co.total
-````
+> cd lib
+> require './demo'
+> irb
+irb> make_items
+irb> co = Checkout.new(promotional_rules)
+irb> co.scan(@item1)
+irb> co.scan(@item2)
+irb> co.scan(@item3)
+irb> co.total
+               => 66.78
+```
 
 ### Tests
 

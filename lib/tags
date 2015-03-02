@@ -1,0 +1,7 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+Checkout	/Users/chrishandley/Postcourse/Alliants/lib/checkout.rb	/^class Checkout$/;"	c	language:Ruby
+initialize	/Users/chrishandley/Postcourse/Alliants/lib/checkout.rb	/^  def initialize(promotions=[])$/;"	f	language:Ruby	class:Checkout
+make_items	/Users/chrishandley/Postcourse/Alliants/lib/demo2.rb	/^def make_items$/;"	f	language:Ruby
+promotional_rules	/Users/chrishandley/Postcourse/Alliants/lib/demo2.rb	/^def promotional_rules $/;"	f	language:Ruby
+scan	/Users/chrishandley/Postcourse/Alliants/lib/checkout.rb	/^  def scan(item)$/;"	f	language:Ruby	class:Checkout
+total	/Users/chrishandley/Postcourse/Alliants/lib/checkout.rb	/^  def total$/;"	f	language:Ruby	class:Checkout

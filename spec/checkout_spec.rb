@@ -1,4 +1,6 @@
 require "checkout"
+require 'basket'
+require 'total_calculator'
 
 describe Checkout do
   it "can scan an item and calculate a total" do
